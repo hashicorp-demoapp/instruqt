@@ -1,0 +1,45 @@
+slug: new-demo-app
+id: yxxm7iq9po2d
+type: track
+title: New Demo Application
+teaser: something
+description: something
+icon: ""
+tags:
+- ""
+owner: hashicorp
+developers:
+- jackson.nic@gmail.com
+- eveld@hashicorp.com
+- lance@hashicorp.com
+private: false
+published: false
+challenges:
+- slug: challenge-1
+  id: pl0hhaztwykv
+  type: challenge
+  title: Challenge 1
+  teaser: something
+  assignment: blah
+  tabs:
+  - title: Vault
+    type: service
+    hostname: workstation
+    path: /
+    port: 18200
+  - title: App
+    type: service
+    hostname: workstation
+    path: /coffee
+    port: 19090
+  - title: Terminal
+    type: terminal
+    hostname: workstation
+  - title: Consul
+    type: service
+    hostname: workstation
+    path: /ui
+    port: 18500
+  difficulty: basic
+  timelimit: 500
+checksum: "14446588002841518141"

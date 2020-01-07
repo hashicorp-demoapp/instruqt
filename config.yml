@@ -1,0 +1,6 @@
+version: "2"
+virtualmachines:
+- name: workstation
+  image: instruqt-hashicorp/shipyard
+  shell: /bin/bash
+  machine_type: g1-small
