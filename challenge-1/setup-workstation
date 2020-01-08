@@ -22,4 +22,4 @@ mv kubectl /usr/bin
 echo "export KUBECONFIG=/root/.shipyard/config/k3s/kubeconfig.yaml" >> /root/.bashrc
 echo "export VAULT_ADDR=http://localhost:18200" >> /root/.bashrc
 echo "export VAULT_TOKEN=root" >> /root/.bashrc
-echo "export CONSUL_ADDR=http://localhost:18500" >> /root/.bashrc
+echo "export CONSUL_HTTP_ADDR=http://localhost:18500" >> /root/.bashrc
