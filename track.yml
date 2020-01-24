@@ -10,8 +10,10 @@ tags:
 owner: hashicorp
 developers:
 - jackson.nic@gmail.com
-- eveld@hashicorp.com
 - lance@hashicorp.com
+- eveld@hashicorp.com
+- neil@hashicorp.com
+- rosemary@hashicorp.com
 private: false
 published: false
 challenges:
@@ -40,6 +42,11 @@ challenges:
     hostname: workstation
     path: /ui
     port: 18500
+  - title: HashiCups
+    type: service
+    hostname: workstation
+    path: /
+    port: 10080
   difficulty: basic
   timelimit: 500
-checksum: "14446588002841518141"
+checksum: "13290945835617580273"

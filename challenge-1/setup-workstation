@@ -1,22 +1,6 @@
 #!/bin/bash
 
-# Install Vault
-wget https://releases.hashicorp.com/vault/1.3.1/vault_1.3.1_linux_amd64.zip
-unzip vault_1.3.1_linux_amd64.zip
-mv vault /usr/bin
-
-# Install Consul
-wget https://releases.hashicorp.com/consul/1.6.2/consul_1.6.2_linux_amd64.zip
-unzip consul_1.6.2_linux_amd64.zip
-mv consul /usr/bin
-
-# Install Kubectl 
-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
-chmod +x kubectl
-mv kubectl /usr/bin
-
-# Install shipyard and create environment
- curl https://shipyard.run/apply | /bin/bash -s github.com/hashicorp-demoapp/infrastructure//blueprint
+shipyard restart
 
  # Add env vars
 echo "export KUBECONFIG=/root/.shipyard/config/k3s/kubeconfig.yaml" >> /root/.bashrc

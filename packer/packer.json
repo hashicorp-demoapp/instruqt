@@ -1,0 +1,30 @@
+{
+    "variables": {
+      "project_id": "instruqt-hashicorp"
+    },
+    "builders": [
+      {
+        "type": "googlecompute",
+        "project_id": "{{user `project_id`}}",
+        "source_image_family": "ubuntu-1804-lts",
+        "zone": "europe-west1-b",
+        "ssh_username" : "root",
+        "image_name": "hashicups",
+        "image_labels": {
+          "created": "{{ timestamp }}"
+        }
+      }
+    ],
+    "provisioners": [
+      {
+        "destination": "/tmp/google-startup-scripts.service",
+        "source": "resources/google-startup-scripts.service",
+        "type": "file"
+      },
+      {
+        "type": "shell",
+        "script": "bootstrap.sh"
+      }
+    ]
+  
+  }
